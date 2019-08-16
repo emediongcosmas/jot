@@ -17,9 +17,6 @@ if($routes[0] != ''){
     $view = "login";
 }
 
-
-    $page = 'login';
-
     require 'views/'.$view.'/partials/header.php';
     require 'views/'.$view.'/'.$view.'.php';
-    require 'views/partials/footer.php';
+    require 'views/'.$view.'/partials/footer.php';
