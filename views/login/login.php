@@ -17,10 +17,20 @@
                   </div>
                   <form class="user" action="" method="POST">
                       
-                      
+                    <?php
+                    
+                    if( isset($_POST['email']) && !empty($_POST['email']) &&
+                        isset($_POST['password']) && !empty($_POST['password']))
+                        {
+                            user::login(
+                                $_POST['email'], 
+                                $_POST['password']
+                            );
+                        }       
+                    ?>
                       
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" name="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
                       <input type="password" name="password" class="form-control form-control-user" id="password" placeholder="Password">
@@ -31,9 +41,7 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
+                    <button class="btn btn-primary btn-user btn-block" type="submit">Register Account</button>
                     <!-- <hr>
                     <a href="index.html" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google

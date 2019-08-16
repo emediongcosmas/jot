@@ -41,4 +41,30 @@ class user {
         
     }
     
+    public static function login($email, $password) {
+
+        global $db;
+
+        $param = array(
+            'email' => $email
+        );
+
+        $user = $db->query("SELECT * FROM user WHERE email = :email", $param, false);
+        
+        $registered_pwd = $user['password'];
+        $pwd = crypt($password, $registered_pwd);
+                
+            if($registered_pwd != $pwd){
+                respond::alert('danger', '', 'Invalid login details');
+            } else {
+                respond::alert('success', '', 'Login successful');
+                
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                
+                header('Location: home'); 
+            }
+
+    }
+    
 }
