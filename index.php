@@ -18,7 +18,7 @@ $db = new Db();
 
  });
 
-    // Get the current uri
+    // This function removes the script name from the URL
     function getCurrentUri()
     {
         $basepath = implode('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)) . '/';

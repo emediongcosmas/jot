@@ -1,6 +1,21 @@
 <?php
 
+if($routes[0] != ''){
+    $views = array("login", "register");
 
+    if(in_array($routes[0], $views)){
+
+        $view = $routes[0];
+
+    }else{
+
+        $view = '404';
+
+        }
+
+}else{
+    $view = "home";
+}
 
 if(isset($_SESSION['email'])) {
 
