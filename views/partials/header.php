@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-marker"></i>
                 </div>
@@ -39,9 +39,9 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
+            <!-- Nav Item - Notes -->
             <li class="nav-item <?php respond::active($page, 'home'); ?>">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="home">
                     <i class="fas fa-fw fa-file-alt"></i>
                     <span>Notes</span></a>
             </li>
@@ -49,9 +49,9 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Labels Collapse Menu -->
             <li class="nav-item <?php respond::active($page, 'labels'); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="labels" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Labels</span>
                 </a>
@@ -72,16 +72,16 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
             
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Archive -->
             <li class="nav-item <?php respond::active($page, 'archive'); ?>">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="archive">
                     <i class="fas fa-fw fa-archive"></i>
                     <span>Archive</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item <?php respond::active($page, 'deleted'); ?>">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="deleted">
                     <i class="fas fa-fw fa-trash-alt"></i>
                     <span>Deleted</span></a>
             </li>
@@ -202,7 +202,11 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['firstname'].' '.$user['lastname']; ?></span>
+                                <!-- <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60"> -->
+                                <?php
+                                    echo user::ProfilePicture($image);
+                                ?>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

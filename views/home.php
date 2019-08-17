@@ -23,14 +23,14 @@ $page = 'home';
 if(isset($_SESSION['email'])) {
 
     $email = $_SESSION['email'];
-    // $user = users::details($email);
+    $user = user::details($email);
+    $image = $user['photo'];
     
     require 'views/partials/header.php';
     require 'views/'.$view.'/'.$view.'.php';
     require 'views/partials/footer.php';
     
 }else{
-    
     require 'views/partials/header.php';
     require 'views/'.$view.'/'.$view.'.php';
     require 'views/partials/footer.php';

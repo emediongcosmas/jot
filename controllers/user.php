@@ -67,4 +67,31 @@ class user {
 
     }
     
+    public static function details($email){
+        
+        global $db;
+        
+        $param = array(
+            'email' => $email
+        );
+        
+        $user = $db->query("SELECT * FROM user WHERE email = :email", $param, false);
+         
+            if($user){
+                return $user;
+            }
+
+    }
+    
+    public static function ProfilePicture($image) {
+        
+        if (empty($image)) { 
+            $image = "profile-default.png"; 
+            echo '<img class="img-profile rounded-circle" src="assets/img/'.$image.'">';
+        } else {
+            echo '<img class="img-profile rounded-circle" src="'.$image.'">';
+        }
+        
+    }
+    
 }
