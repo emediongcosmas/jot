@@ -13,7 +13,7 @@ class note
         $param = array(
             'user_id' => $user_id,
             'title' => $title,
-            'body' => $body,
+            'body' => nl2br($body),
             'slug' => $slug,
             'timestamp' => date("Y-m-d H:i:s")
         );

@@ -28,7 +28,7 @@
         ?> 
 
             <!-- Content Column -->
-            <div class="col-lg-5 mb-4">
+            <div class="col-lg-3 d-inline-block mb-4">
                 <!-- Content -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
