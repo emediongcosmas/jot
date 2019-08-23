@@ -24,18 +24,26 @@
             
             if($notes){
             foreach($notes as $note) {
+                // $time = $note['timestamp'];
                 
         ?> 
 
             <!-- Content Column -->
-            <div class="col-lg-3 d-inline-block mb-4">
+            <div class="col-lg-3 d-inline mb-4">
                 <!-- Content -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><?= $note['title']; ?></h6>
+                        <h6 class="m-0 font-weight-bold text-primary float-left"><?= $note['title']; ?></h6>
                     </div>
                     <div class="card-body">
                         <p><?= $note['body']; ?></p>
+                        <br>
+                        
+                        <div class="text-center options">
+                            <a href=""><i class="far fa-images"></i></a>
+                            <a href=""><i class="far fa-edit"></i></a>
+                            <a href=""><i class="far fa-trash-alt"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
