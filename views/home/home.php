@@ -24,7 +24,7 @@
             
             if($notes){
             foreach($notes as $note) {
-                // $time = $note['timestamp'];
+                // $time = $jot['timestamp'];
                 
         ?> 
 

@@ -3695,7 +3695,7 @@ module.exports = {
 
     // convert an array to a date.
     // the array should mirror the parameters below
-    // note: all values past the year are optional and will default to the lowest possible value.
+    // jot: all values past the year are optional and will default to the lowest possible value.
     // [year, month, day , hour, minute, second, millisecond]
     function configFromArray (config) {
         var i, date, input = [], currentDate, expectedWeekday, yearToUse;

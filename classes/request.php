@@ -2,7 +2,7 @@
 
 class request
 {
-    static $url = "http://localhost/note/";
+    static $url = "http://localhost/jot/";
 
 	public static function base() {
 		return self::$url;
