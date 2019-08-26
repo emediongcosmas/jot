@@ -41,7 +41,7 @@
                         
                         <div class="text-center options">
                             <a href=""><i class="far fa-images"></i></a>
-                            <a href=""><i class="far fa-edit"></i></a>
+                            <a data-toggle="modal" data-target="#edit-note" data-id="<?php echo $note['user_id']; ?>" id="getNote" href="#edit-note"><i class="far fa-edit"></i></a>
                             <a href=""><i class="far fa-trash-alt"></i></a>
                         </div>
                     </div>
