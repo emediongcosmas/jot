@@ -18,7 +18,7 @@ if($routes[0] != ''){
 }
 
 
-$page = 'home';
+$page = 'Home';
 
 if(isset($_SESSION['email'])) {
 

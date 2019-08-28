@@ -17,7 +17,7 @@ if($routes[0] != ''){
     $view = "profile";
 }
 
-$page = 'home';
+$page = 'Profile';
 
 if(isset($_SESSION['email'])) {
 
