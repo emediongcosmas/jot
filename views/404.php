@@ -1,8 +1,9 @@
 <!-- Custom styles for this template-->
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+<link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!--  Custom edited stylesheet  -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+<!--  Custom edited stylesheet  -->
+<link rel="stylesheet" href="assets/css/custom.css">
+    
 <section class="al-404">
     <div class="container-fluid">
         <div class="row">
