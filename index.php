@@ -39,7 +39,7 @@ $db = new Db();
 
         // Set routes
         if($routes[1] != ''){
-            $views = array("home", "login", "register", "logout");
+            $views = array("home", "login", "register", "logout", "edit-note");
 
             if(in_array($routes[1], $views)){
 

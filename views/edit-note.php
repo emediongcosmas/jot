@@ -1,6 +1,6 @@
 <?php
 
-$page = 'Home';
+$page = 'Edit';
 
 if(isset($_SESSION['email'])) {
 

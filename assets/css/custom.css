@@ -42,3 +42,17 @@ textarea{
 .al-404 a{
     font-size: 15px;
 }
+
+.options {
+    display: inline;
+    color: blue;
+}
+
+.options :hover{
+    color: blue;
+}
+
+textarea {
+    resize: none;
+}
+

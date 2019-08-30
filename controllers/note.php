@@ -6,7 +6,7 @@ class note
     public static function AddNote($user_id, $title, $body) 
     {
         
-        global $db;
+        global $db; 
         
         $slug = request::slug($title);
 
@@ -38,12 +38,29 @@ class note
             'user_id' => $id
         );
         
-        $post = $db->query("SELECT * FROM note WHERE user_id = :user_id ORDER BY timestamp DESC", $param,true);
+        $note = $db->query("SELECT * FROM note WHERE user_id = :user_id ORDER BY timestamp DESC", $param,true);
         
-        if ($post) {
+        if ($note) {
             
-            return $post ;
+            return $note ;
             
+        }
+        
+    }
+    
+    public static function FetchSingleNote($id) 
+    {
+        
+        global $db;
+        
+        $param = array(
+            'id' => $id
+        );
+        
+        $note = $db->query("SELECT * FROM note WHERE id = :id", $param, false);
+         
+        if($note){
+            return $note;
         }
         
     }

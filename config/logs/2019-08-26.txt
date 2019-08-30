@@ -1,3 +1,0 @@
-Time : 17:55:46
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'note.jot' doesn't exist
-Raw SQL : SELECT * FROM jot WHERE user_id = :user_id ORDER BY timestamp DESC

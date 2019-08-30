@@ -40,9 +40,16 @@
                         <br>
                         
                         <div class="text-center options">
-                            <a href="#"><i class="far fa-images"></i></a>
-                            <a href="#" data-toggle="modal" data-target="#edit-note" data-id="<?php echo $note['id']; ?>" id="getNote"><i class="far fa-edit"></i></a>
-                            <a href=""><i class="far fa-trash-alt"></i></a>
+                            <!-- EDIT OPTION -->
+                            <form action="edit-note" method="post">
+                                <input type="hidden" name="id" value="<?php echo $note['id']; ?>">
+                                <button type="submit" class="btn options"><i class="far fa-edit"></i></button>
+                            </form>
+                            <!-- DELETE OPTION -->
+                            <form action="delete" method="post">
+                                <input type="hidden" name="id" value="<?php echo $note['id']; ?>">
+                                <button type="submit" class="btn options"><i class="far fa-trash-alt"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>
