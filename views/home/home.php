@@ -9,6 +9,7 @@
     }       
 ?>
 
+<!-- THIS IS THE ADD BUTTON FOR ADDING NOTES -->
 <a href="" data-toggle="modal" data-target="#addNote" class="float">
     <i class="fa fa-plus my-float"></i>
 </a>
@@ -39,7 +40,7 @@
                         <p><?= $note['body']; ?></p>
                         <br>
                         
-                        <div class="text-center options">
+                        <div class="text-center options" style="display: flex;">
                             <!-- EDIT OPTION -->
                             <form action="edit-note" method="post">
                                 <input type="hidden" name="id" value="<?php echo $note['id']; ?>">
