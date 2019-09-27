@@ -9,7 +9,6 @@ class note
         global $db; 
         
         $slug = request::slug($title);
-
         $param = array(
             'user_id' => $user_id,
             'title' => $title,
@@ -65,8 +64,27 @@ class note
         
     }
     
-    public static function DeleteNote($id) 
+    public static function UpdateNote($id, $title, $body, $slug) 
     {
+        
+        global $db;
+        
+        $slug = request::slug($title);
+        $param = array(
+            'id' => $id,
+            'title' => $title,
+            'body' => nl2br($body),
+            'slug' => $slug,
+            'timestamp' => date("Y-m-d H:i:s")
+        );
+        
+        $update = "UPDATE note SET title = :title, body = :body, timestamp = :timestamp, slug = :slug  
+                               WHERE id = :id";
+        $note = $db->query($update, $param, false);
+         
+        if($note){
+            return $note;
+        }
         
     }
 }
