@@ -1,6 +1,6 @@
 
 <?php 
-
+    // This will check if the form has been submitted and therefore make an update to the database
     if(isset($_POST['editNote']))
     {
         note::UpdateNote(
@@ -10,7 +10,8 @@
         );
         header('Location: home');
     } else {
-
+        
+    // This will fetch the note to be edited from the database
     if(isset($_POST['id'])){
         $note   = note::FetchSingleNote($_POST['id']);
         $title  = $note['title'];
@@ -20,7 +21,6 @@
 <div class="container-fluid">
     <div class="row h-100">
         <div class="col-lg-8 d-inline mb-4">
-            
             <form method="POST" id="post-form" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -35,11 +35,10 @@
                 <button type="button" class="btn btn-secondary" onclick="window.location.href='home';">Close</button>
             </form>
         </div>
-        
     </div>
-    
 </div>
  
+<!-- This will redirect to the homepage if there is no note to be edited -->
 <?php }else{
     header('Location: home');
 } } ?>
