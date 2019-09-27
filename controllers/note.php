@@ -64,7 +64,7 @@ class note
         
     }
     
-    public static function UpdateNote($id, $title, $body, $slug) 
+    public static function UpdateNote($id, $title, $body) 
     {
         
         global $db;
