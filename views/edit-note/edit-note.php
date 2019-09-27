@@ -20,7 +20,7 @@
                     <textarea class="form-control" name="body"><?php echo $body;?></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" name="addNote">Save</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='home';">Close</button>
             </form>
         </div>
         

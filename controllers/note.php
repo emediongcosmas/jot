@@ -64,4 +64,9 @@ class note
         }
         
     }
+    
+    public static function DeleteNote($id) 
+    {
+        
+    }
 }
