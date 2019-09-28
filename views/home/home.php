@@ -47,10 +47,11 @@
                                 <button type="submit" class="btn options"><i class="far fa-edit"></i></button>
                             </form>
                             <!-- DELETE OPTION -->
-                            <form action="delete" method="post">
+                            <!-- <form action="delete" method="post">
                                 <input type="hidden" name="id" value="<?php echo $note['id']; ?>">
                                 <button type="submit" class="btn options"><i class="far fa-trash-alt"></i></button>
-                            </form>
+                            </form> -->
+                            <button type="submit" class="btn options" data-toggle="modal" data-target="#deleteNote" data-id="<?php echo $note['id']; ?>"><i class="far fa-trash-alt"></i></button>
                         </div>
                     </div>
                 </div>
