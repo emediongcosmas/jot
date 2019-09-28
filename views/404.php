@@ -13,7 +13,7 @@
                         404
                     </h2>
                     <p>The page you are looking for does not exist</p>
-                    <a class="btn btn-primary mt-4" href="home">Back to homepage</a>
+                    <a class="btn btn-primary mt-4" href="home"><i class="far fa-undo-alt"></i>Back to homepage</a>
                 </div>
             </div>
         </div>

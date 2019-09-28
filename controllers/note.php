@@ -87,4 +87,20 @@ class note
         }
         
     }
+    
+    public static function DeleteNote($id) 
+    {
+        global $db;
+        
+        $param = array(
+            'id' => $id
+        );
+        
+        $delete = "DELETE FROM table_name WHERE id = :id";
+        $note = $db->query($delete, $param);
+        
+        if($note){
+            return $note;
+        }
+    }
 }
