@@ -37,7 +37,8 @@
                         <h6 class="m-0 font-weight-bold text-primary float-left"><?= $note['title']; ?></h6>
                     </div>
                     <div class="card-body">
-                        <p><?= $note['body']; ?></p>
+                        <!-- <p><?= $note['body']; ?></p> -->
+                        <p><?= request::chop_string($note['body'], 50); ?></p>
                         <br>
                         
                         <div class="text-center options" style="display: flex;">

@@ -185,4 +185,17 @@ class request
         }
 
 	}
+    
+    public static function chop_string($string, $length) {
+        
+        if (strlen($string) < $length)
+            return $string;
+            
+        $string = substr($string,0,$length);
+        if ($spc_pos = strrpos($string, " "))
+            $string = substr($string,0,$spc_pos);
+            
+        return $string . " ...";
+        
+    }
 }
