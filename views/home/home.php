@@ -52,7 +52,7 @@
                                 <input type="hidden" name="id" value="<?php echo $note['id']; ?>">
                                 <button type="submit" class="btn options"><i class="far fa-trash-alt"></i></button>
                             </form> -->
-                            <button type="submit" class="btn options" data-toggle="modal" data-target="#deleteNote" data-id="<?php echo $note['id']; ?>"><i class="far fa-trash-alt"></i></button>
+                            <button type="submit" class="btn options delete-btn" data-toggle="modal" data-target="#deleteNote" data-id="<?php echo $note['id']; ?>"><i class="far fa-trash-alt"></i></button>
                         </div>
                     </div>
                 </div>
